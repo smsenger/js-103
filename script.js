@@ -1,3 +1,15 @@
+function hideElem(element) {
+    document.getElementById(element).style.visibility = "hidden"
+}
+
+hideElem("story")
+
+
+function showElem(element) {
+    document.getElementById(element).style.visibility = "visible"
+}
+
+
 
 const myButton = document.getElementById("clickMe");
 
@@ -22,6 +34,15 @@ const noun4Input = document.getElementById("noun4Input");
 const noun5 = document.getElementById("noun5");
 const noun5Input = document.getElementById("noun5Input");
 
+const adj1 = document.getElementById("adj1");
+const adj1Input = document.getElementById("adj1Input");
+
+const noun7 = document.getElementById("noun7");
+const noun7Input = document.getElementById("noun7Input");
+
+const noun8 = document.getElementById("noun8");
+const noun8Input = document.getElementById("noun8Input");
+
 
 myButton.addEventListener('click', function (e) {
     e.preventDefault();
@@ -33,5 +54,15 @@ myButton.addEventListener('click', function (e) {
     noun4.innerHTML = noun4Input.value;
     noun5.innerHTML = noun5Input.value;
     noun6.innerHTML = noun6Input.value;
-});
+    adj1.innerHTML = adj1Input.value;
+    noun7.innerHTML = noun7Input.value;
+    noun8.innerHTML = noun8Input.value;
 
+    showElem("story");
+    // hideElem("form");     //these two functions make the following two functions not work
+    // hideElem("clickMe");
+    const container = document.getElementById("form");
+    document.body.removeChild(container);
+    
+
+});
